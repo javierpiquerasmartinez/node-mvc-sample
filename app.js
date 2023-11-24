@@ -3,17 +3,9 @@ import { moviesRouter } from './routes/movies.js'
 import { corsMiddleware } from './middlewares/cors.js'
 
 const app = express()
-
-app.disable('x-powered-by')
-
 app.use(json())
 app.use(corsMiddleware())
-
-app.get('/', (req, res) => {
-  res.status(200).json({
-    message: 'Hello World'
-  })
-})
+app.disable('x-powered-by')
 
 app.use('/movies', moviesRouter)
 

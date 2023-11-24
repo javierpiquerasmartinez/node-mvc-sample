@@ -11,7 +11,7 @@ const movieSchema = z.object({
   rate: z.number().min(0).max(10).default(5),
   poster: z.string().url().optional(),
   genre: z.array(
-    z.enum(['Action', 'Crime', 'Adventure', 'Drama'])
+    z.enum(['Action', 'Crime', 'Adventure', 'Drama', 'Comedy'])
   )
 })
 

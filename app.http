@@ -1,2 +1,35 @@
 ### GET all movies
 GET http://localhost:3000/movies/
+
+### GET all "Action" movies
+GET http://localhost:3000/movies?genre=Action
+
+### GET movie by ID
+GET http://localhost:3000/movies/618f09b9-7242-415b-8b4f-d9a308f4552a
+
+### POST a movie
+POST http://localhost:3000/movies/
+Content-Type: application/json
+
+{
+    "title": "CampeoNeX",
+    "year": 2023,
+    "director": "Javier Piqueras",
+    "duration": 120,
+    "genre": [
+      "Comedy"
+    ],
+    "rate": 7
+}
+
+### UPDATE a movie
+PATCH http://localhost:3000/movies/618f09b9-7242-415b-8b4f-d9a308f4552a
+Content-Type: application/json
+
+{
+    "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+    "rate": 9
+}
+
+### DELETE a movie
+DELETE http://localhost:3000/movies/618f09b9-7242-415b-8b4f-d9a308f4552a
