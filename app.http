@@ -12,7 +12,7 @@ POST http://localhost:3000/movies/
 Content-Type: application/json
 
 {
-    "title": "Nueva peli 4",
+    "title": "Película Nueva",
     "year": 2023,
     "director": "Javier Piqueras",
     "duration": 120,
