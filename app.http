@@ -12,12 +12,12 @@ POST http://localhost:3000/movies/
 Content-Type: application/json
 
 {
-    "title": "CampeoNeX",
+    "title": "Nueva peli 4",
     "year": 2023,
     "director": "Javier Piqueras",
     "duration": 120,
     "genre": [
-      "Comedy"
+      "Adventure"
     ],
     "rate": 7
 }

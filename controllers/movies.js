@@ -1,4 +1,5 @@
-import { MovieModel } from '../models/local-fs/movie.js'
+// import { MovieModel } from '../models/local-fs/movie.js'
+import { MovieModel } from '../models/mysql/movie.js'
 import { validateMovie, validatePartialMovie } from '../schemas/movies.js'
 
 export class MovieController {
@@ -13,7 +14,7 @@ export class MovieController {
     if (result.error) {
       return res.status(400).send(result.error.message)
     }
-    const newMovie = await MovieModel.create(result)
+    const newMovie = await MovieModel.create(result.data)
     res.status(201).json(newMovie)
   }
 
